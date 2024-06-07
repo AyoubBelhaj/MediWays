@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="499.0" prefWidth="787.0" style="-fx-background-color: #B3E0FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ListerRdv">
+    <children>
+        <Label layoutX="268.0" prefHeight="38.0" prefWidth="376.0" text="Liste des rendez-vous" textFill="#004080">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="homeImg" fitHeight="38.0" fitWidth="38.0" layoutX="734.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../imgs/home.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="734.0" layoutY="13.0" mnemonicParsing="false" onAction="#homee" opacity="0.0" prefHeight="38.0" prefWidth="38.0" />
+        <Pane prefHeight="400.0" prefWidth="150.0" style="-fx-background-color: #B3E0FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="ret" layoutX="34.0" layoutY="14.0" mnemonicParsing="false" onAction="#interAdm" prefHeight="64.0" prefWidth="67.0" stylesheets="@../CSS/ButtonHome1.css" text="Retour" textFill="WHITE" />
+                <TextField fx:id="num" layoutX="15.0" layoutY="122.0" prefHeight="25.0" prefWidth="120.0" promptText="Numéro" />
+                <TextField fx:id="date" layoutX="15.0" layoutY="178.0" prefHeight="25.0" prefWidth="120.0" promptText="Date" />
+                <TextField fx:id="rque" layoutX="15.0" layoutY="237.0" prefHeight="25.0" prefWidth="120.0" promptText="Remarque" />
+                <TextField fx:id="id_pat" layoutX="15.0" layoutY="290.0" prefHeight="25.0" prefWidth="120.0" promptText="Id patient" />
+                <TextField fx:id="id_med" layoutX="15.0" layoutY="348.0" prefHeight="25.0" prefWidth="120.0" promptText="Id medecin" />
+            </children>
+        </Pane>
+        <TableView fx:id="tableRdv" layoutX="134.0" layoutY="69.0" prefHeight="320.0" prefWidth="653.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../CSS/TablePat.css">
+            <columns>
+                <TableColumn fx:id="col_num" prefWidth="130.20001220703125" text="Numéro" />
+                <TableColumn fx:id="col_date" prefWidth="123.39999389648438" text="Date" />
+                <TableColumn fx:id="col_pat" prefWidth="135.39996337890625" text="Id Patient" />
+                <TableColumn fx:id="col_med" prefWidth="105.79998779296875" text="Id Médecin" />
+                <TableColumn fx:id="col_rq" prefWidth="155.99996337890627" text="Remarque" />
+            </columns>
+        </TableView>
+        <Button fx:id="ajouter" layoutX="201.0" layoutY="396.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="38.0" prefWidth="149.0" style="-fx-background-color: #004080;" stylesheets="@../CSS/ButtonHome2.css" text="Ajouter" textFill="WHITE">
+            <font>
+                <Font name="Book Antiqua" size="19.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="modifier" layoutX="381.0" layoutY="396.0" mnemonicParsing="false" onAction="#modifier" prefHeight="38.0" prefWidth="149.0" style="-fx-background-color: #004080;" stylesheets="@../CSS/ButtonHome2.css" text="Modifier" textFill="WHITE">
+            <font>
+                <Font name="Book Antiqua" size="19.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="supprimer" layoutX="557.0" layoutY="396.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="38.0" prefWidth="149.0" style="-fx-background-color: #004080;" stylesheets="@../CSS/ButtonHome2.css" text="Supprimer" textFill="WHITE">
+            <font>
+                <Font name="Book Antiqua" size="19.0" />
+            </font>
+        </Button>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="400.0" prefWidth="647.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.homeController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="647.0" layoutX="-1.0" layoutY="-1.0">
+         <image>
+            <Image url="@../Images/Domestic-medical-tourism_1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="137.0" layoutY="35.0" prefHeight="84.0" prefWidth="288.0" text="MediWays" textFill="#151515">
+         <font>
+            <Font name="System Bold" size="57.0" />
+         </font>
+      </Label>
+
+      <Button fx:id="adm" layoutX="168.0" layoutY="190.0" mnemonicParsing="false" onAction="#loginAdm" prefHeight="68.0" prefWidth="226.0" stylesheets="@../CSS/ButtonHome1.css" text="Connexion" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

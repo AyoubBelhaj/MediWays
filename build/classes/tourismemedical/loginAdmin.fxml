@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="400.0" prefWidth="647.0" style="-fx-background-color: #E6F7FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <Button fx:id="admBtn" layoutX="198.0" layoutY="267.0" mnemonicParsing="false" onAction="#loginActionAdm" prefHeight="25.0" prefWidth="251.0" stylesheets="@../CSS/ButtonHome1.css" text="Se connecter" textFill="WHITE" />
+      <TextField fx:id="login" layoutX="198.0" layoutY="180.0" prefHeight="25.0" prefWidth="251.0" promptText="Identifiant" />
+      <PasswordField fx:id="pswd" layoutX="198.0" layoutY="223.0" prefHeight="25.0" prefWidth="251.0" promptText="Mot de passe" />
+      <Label layoutX="156.0" layoutY="67.0" text="Connexion Admin" textFill="#004080">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="556.0" layoutY="21.0" mnemonicParsing="false" onAction="#backhommee" prefHeight="38.0" prefWidth="52.0" style="-fx-background-color: #E6F7FF;">
+         <graphic>
+            <ImageView fx:id="homeImg" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

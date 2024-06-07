@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ServicesAccController">
+   <children>
+      <BorderPane fx:id="bp" layoutX="200.0" layoutY="92.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #E6F7FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="398.0" prefWidth="116.0" spacing="7.0" style="-fx-background-color: #E6F7FF;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="id" />
+                  <TextField fx:id="id" />
+                  <Label text="nom" />
+                  <TextField fx:id="nom" />
+                  <Label text="description" />
+                  <TextField fx:id="description" />
+                  <Label text="cout" />
+                  <TextField fx:id="cout" />
+                  <Label prefHeight="17.0" prefWidth="110.0" text="TypeAccomodation" />
+                  <TextField fx:id="typeacc" />
+                  <Label text="nom Hotel" />
+                  <TextField fx:id="nomhotel" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
+         </left>
+         <top>
+            <Pane prefHeight="59.0" prefWidth="695.0" style="-fx-background-color: #caf0f8;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#retourclickk" prefHeight="32.0" prefWidth="49.0" style="-fx-background-color: #219ebc;" stylesheets="@../CSS/ButtonHome1.css" text="retour" />
+                  <Label layoutX="321.0" layoutY="10.0" text="Services Accomodation" textFill="#2c2b2a">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="719.0" layoutY="12.0" mnemonicParsing="false" onAction="#home" prefHeight="35.0" prefWidth="48.0" style="-fx-background-color: #caf0f8;">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <TableView fx:id="tvmeds" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#afficherconsole" prefHeight="350.0" prefWidth="624.0" stylesheets="@../CSS/TablePat.css" BorderPane.alignment="TOP_CENTER">
+              <columns>
+                <TableColumn fx:id="colid" prefWidth="57.0" text="ID" />
+                <TableColumn fx:id="colnom" prefWidth="65.0" text="nom" />
+                  <TableColumn fx:id="coldescription" prefWidth="88.0" text="description" />
+                  <TableColumn fx:id="colcout" prefWidth="113.0" text="cout" />
+                  <TableColumn fx:id="coltacc" prefWidth="141.0" text="Type Accomodation" />
+                  <TableColumn fx:id="colnomhot" prefWidth="159.0" text="Nom Hotel" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TableView>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="800.0" spacing="90.0" style="-fx-background-color: #caf0f8;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnAjout" mnemonicParsing="false" onAction="#AjouterOn" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #219ebc;" stylesheets="@../CSS/ButtonHome1.css" text="Ajouter" />
+                  <Button fx:id="btnModif" mnemonicParsing="false" onAction="#ModifierOn" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #219ebc;" stylesheets="@../CSS/ButtonHome1.css" text="Modifer" />
+                  <Button fx:id="btnSupp" mnemonicParsing="false" onAction="#SupprimerOn" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #219ebc;" stylesheets="@../CSS/ButtonHome1.css" text="Supprimer" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="60.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

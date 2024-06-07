@@ -1,0 +1,3 @@
+1,FlYLIKESTAR,comfort classe ,4200.00,3,Business
+2,SC,Super Comfort,5000.55,5,Business
+3,EYS,Normal et Simple,1000.00,10,Economique
